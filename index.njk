@@ -1,0 +1,109 @@
+---
+layout: base.njk
+permalink: /index.html
+---
+{% set essays = collections.article | reverse %}
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="sheet">
+      <h1 class="statement">Write about the society you're <em>already inside</em>.</h1>
+      <p class="standfirst">A peer-reviewed journal by and for MA students at JNU. Anyone can submit, on any subject that carries a sociological argument — there is no fixed beat or theme.</p>
+    </div>
+    {% if essays.length > 0 %}
+    <article class="sheet issue-card">
+      <p class="issue-meta">Latest essay</p>
+      <h2><a href="{{ essays[0].url }}">{{ essays[0].data.title }}</a></h2>
+      <p class="byline">{{ essays[0].data.author }}</p>
+      <p class="dek">{{ essays[0].data.summary }}</p>
+    </article>
+    {% else %}
+    <article class="sheet issue-card">
+      <p class="issue-meta">Coming soon</p>
+      <h2>The first essay is on its way</h2>
+      <p class="dek">Nothing has been published yet — add one from the editor panel at /admin.</p>
+    </article>
+    {% endif %}
+  </div>
+</div>
+
+<section id="issue">
+  <div class="wrap sheet">
+    <div class="sec-head">
+      <h2>Latest essays</h2>
+      <p>Open submissions — published as soon as they clear review</p>
+    </div>
+
+    {% if essays.length > 0 %}
+    <ul class="index">
+      {% for essay in essays %}
+      <li>
+        <h3><a href="{{ essay.url }}">{{ essay.data.title }}</a></h3>
+        <p class="byline">{{ essay.data.author }}</p>
+        <p class="dek">{{ essay.data.summary }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">No essays published yet. Once one is added through the editor panel at <code>/admin</code>, it will appear here automatically.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section id="review">
+  <div class="wrap sheet">
+    <div class="sec-head">
+      <h2>How review works</h2>
+      <p>Names are removed before a piece reaches its readers</p>
+    </div>
+    <ol class="flow">
+      <li><div><h3>Send the piece</h3><p>Upload a Google Doc or Word file through the submission form. You give a title and a short summary — no subject category to pick, write on anything with a real argument in it.</p></div></li>
+      <li><div><h3>A coordinating editor checks fit</h3><p>Within a week you hear whether the piece is going forward to review, needs reshaping first, or isn't a fit. Desk rejections come with reasons.</p></div></li>
+      <li><div><h3>Two students read it blind</h3><p>Your name comes off the file before two readers see it. They comment directly in the document and write a short recommendation.</p></div></li>
+      <li><div><h3>You revise</h3><p>You get both sets of comments together, with the editor's summary of what has to change versus what's a suggestion. Two weeks to revise, extendable if you ask.</p></div></li>
+      <li><div><h3>Copy-edit and publication</h3><p>An editor adds your essay through the editor panel — no code, just a form — and it goes live and appears in the list above automatically.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="board">
+  <div class="wrap sheet">
+    <div class="sec-head">
+      <h2>Editorial board</h2>
+      <p>Rotates every academic year</p>
+    </div>
+    <!-- EDIT NAMES HERE: change, add, or delete a <div> block. Nothing else depends on these. -->
+    <div class="board">
+      <div><strong>Aparna Menon</strong><span>Coordinating editor</span></div>
+      <div><strong>Rohit Bhaskar</strong><span>Editor</span></div>
+      <div><strong>Sneha Yadav</strong><span>Editor</span></div>
+      <div><strong>Imran Qureshi</strong><span>Editor</span></div>
+      <div><strong>Devika Rao</strong><span>Editor</span></div>
+      <div><strong>Karthik Subramanian</strong><span>Copy &amp; production</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="submit">
+  <div class="wrap sheet">
+    <div class="sec-head">
+      <h2>Submit an essay</h2>
+      <p>Open to all MA and MPhil students at JNU, on any sociological subject</p>
+    </div>
+    <div class="submit-grid">
+      <div>
+        <p>We publish essays, field notes, review essays and photo essays — on whatever you're currently thinking about, not a pre-set list of topics. Term papers are welcome, but rewrite them for a reader who is not your examiner: cut the literature review down to what your argument needs, and put your own claim in the first paragraph.</p>
+        <p>Writing in Hindi is accepted. If a piece is accepted in Hindi we publish it in Hindi, with an English summary.</p>
+        <a class="cta" href="#">Open the submission form</a>
+      </div>
+      <div>
+        <ul class="specs">
+          <li><b>Length</b> 1,500–4,000 words</li>
+          <li><b>Citations</b> ASA or Chicago, used consistently</li>
+          <li><b>Images</b> Your own, or clearly licensed for reuse</li>
+          <li><b>Decision</b> Within four weeks of submitting</li>
+          <li><b>Fee</b> None, to submit or to read</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

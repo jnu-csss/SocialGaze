@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: jnu-csss/SocialGaze
+  branch: main
+
+publish_mode: simple
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Essays"
+    label_singular: "Essay"
+    folder: "articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "One-line summary", name: "summary", widget: "text" }
+      - { label: "Cover image URL (paste your Cloudinary link here, optional)", name: "image", widget: "string", required: false }
+      - { label: "Essay text", name: "body", widget: "markdown" }

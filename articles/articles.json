@@ -1,0 +1,7 @@
+{
+  "layout": "article.njk",
+  "tags": "article",
+  "eleventyComputed": {
+    "permalink": "/essays/{{ page.fileSlug }}/index.html"
+  }
+}
