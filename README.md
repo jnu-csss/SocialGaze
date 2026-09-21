@@ -1,4 +1,4 @@
-what are to be done in search bar 
+what needs to be done in search bar 
 - search by author
 - search by keyword in essay title
 - filter by author
