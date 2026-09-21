@@ -2,6 +2,8 @@ backend:
   name: github
   repo: jnu-csss/SocialGaze
   branch: main
+  base_url: https://cool-sun-5b9alpha001.folderspam776.workers.dev
+  auth_endpoint: auth
 
 publish_mode: simple
 media_folder: "assets/images/uploads"
@@ -19,6 +21,7 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "One-line summary", name: "summary", widget: "text" }
+      - { label: "Broader theme (e.g. Caste, Gender, Labour, Urban studies)", name: "theme", widget: "string", required: false }
       - { label: "Cover image URL (paste your Cloudinary link here, optional)", name: "image", widget: "string", required: false }
       - { label: "Essay text", name: "body", widget: "markdown" }
 
@@ -29,21 +32,48 @@ collections:
         label: "Homepage content"
         file: "_data/site.json"
         fields:
+          - { label: "Nav — 'Latest essays' link text", name: "nav_issue_label", widget: "string" }
+          - { label: "Nav — 'How review works' link text", name: "nav_review_label", widget: "string" }
+          - { label: "Nav — 'Editorial board' link text", name: "nav_board_label", widget: "string" }
+          - { label: "Nav — 'Submit' link text", name: "nav_submit_label", widget: "string" }
+
           - { label: "Hero heading", name: "hero_title", widget: "string" }
           - { label: "Hero subheading", name: "hero_subtitle", widget: "text" }
-          - { label: "'Latest essays' note", name: "issue_note", widget: "string" }
+
+          - { label: "'Latest essays' section title", name: "issue_section_title", widget: "string" }
+          - { label: "'Latest essays' section note", name: "issue_note", widget: "string" }
+          - { label: "Title shown before any essay is published", name: "issue_empty_title", widget: "string" }
+          - { label: "Text shown before any essay is published", name: "issue_empty_text", widget: "text" }
+
+          - { label: "'How review works' section title", name: "review_section_title", widget: "string" }
+          - { label: "'How review works' section note", name: "review_section_note", widget: "string" }
+          - label: "Review process steps"
+            name: "review_steps"
+            widget: "list"
+            fields:
+              - { label: "Step title", name: "title", widget: "string" }
+              - { label: "Step description", name: "text", widget: "text" }
+
+          - { label: "'Editorial board' section title", name: "board_section_title", widget: "string" }
+          - { label: "'Editorial board' section note", name: "board_section_note", widget: "string" }
           - label: "Editorial board"
             name: "board"
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
+
+          - { label: "'Submit an essay' section title", name: "submit_section_title", widget: "string" }
+          - { label: "'Submit an essay' section note", name: "submit_section_note", widget: "string" }
           - { label: "Submission page — paragraph 1", name: "submit_intro_1", widget: "text" }
           - { label: "Submission page — paragraph 2", name: "submit_intro_2", widget: "text" }
+          - { label: "Submit button label", name: "submit_cta_label", widget: "string" }
           - label: "Submission specs"
             name: "submit_specs"
             widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Value", name: "value", widget: "string" }
+
+          - { label: "Footer — first line", name: "footer_line_1", widget: "string" }
           - { label: "Contact email (shown in footer)", name: "contact_email", widget: "string" }
