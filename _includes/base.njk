@@ -19,11 +19,14 @@
       <a href="{{ '/#review' | url }}">{{ site.nav_review_label }}</a>
       <a href="{{ '/#board' | url }}">{{ site.nav_board_label }}</a>
       <a href="{{ '/#submit' | url }}">{{ site.nav_submit_label }}</a>
+      <a href="{{ '/archive/' | url }}">Archive</a>
     </nav>
   </div>
 </header>
 
 {{ content | safe }}
+
+<script src="{{ '/assets/js/search.js' | url }}" defer></script>
 
 <footer>
   <div class="wrap sheet">
