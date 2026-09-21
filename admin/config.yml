@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jnu-csss/SocialGaze
   branch: main
-  base_url: https://cool-sun-5b9alpha001.folderspam776.workers.dev
+  base_url: https://socialgaze-csss.netlify.app
   auth_endpoint: auth
 
 publish_mode: simple
