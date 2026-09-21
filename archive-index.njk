@@ -1,0 +1,33 @@
+---
+layout: base.njk
+permalink: /archive/index.html
+---
+{% set groups = collections.article | yearMonthGroups %}
+<div class="hero">
+  <div class="wrap">
+    <article class="sheet essay-head">
+      <a class="field-back" href="{{ '/#issue' | url }}">← All essays</a>
+      <h1>Archive</h1>
+      <p class="byline">Essays older than two months, organised by year and month</p>
+    </article>
+  </div>
+</div>
+
+<section>
+  <div class="wrap sheet">
+    {% if groups.length > 0 %}
+    <ul class="index">
+      {% for g in groups %}
+      <li>
+        <h3><a href="{{ ('/archive/' + g.year + '/') | url }}">{{ g.year }}</a></h3>
+        <p class="byline">
+          {% for m in g.months %}{{ m.monthName }}{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">Nothing archived yet.</p>
+    {% endif %}
+  </div>
+</section>
