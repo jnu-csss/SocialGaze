@@ -1,23 +1,48 @@
 {
   "hero_title": "Write about the society you're already inside.",
-  "hero_subtitle": "A peer-reviewed journal by and for MA students at JNU. Anyone can submit, on any subject that carries a sociological argument — there is no fixed beat or theme.",
+  "hero_subtitle": "A peer-reviewed journal by and for MA students at JNU. Anyone can submit, on any subject that carries a sociological argument — there is no fixed topic on your thinking.",
   "issue_note": "Open submissions — published as soon as they clear review",
   "board": [
-    { "name": "Aparna Menon", "role": "Coordinating editor" },
-    { "name": "Rohit Bhaskar", "role": "Editor" },
-    { "name": "Sneha Yadav", "role": "Editor" },
-    { "name": "Imran Qureshi", "role": "Editor" },
-    { "name": "Devika Rao", "role": "Editor" },
-    { "name": "Karthik Subramanian", "role": "Copy & production" }
+    {
+      "name": "Prabhat",
+      "role": "editor - phew phew phew"
+    },
+    {
+      "name": "Xenonic",
+      "role": "co-Editor"
+    },
+    {
+      "name": "Robin",
+      "role": "the genius"
+    },
+    {
+      "name": "chopper",
+      "role": "the doctor"
+    }
   ],
-  "submit_intro_1": "We publish essays, field notes, review essays and photo essays — on whatever you're currently thinking about, not a pre-set list of topics. Term papers are welcome, but rewrite them for a reader who is not your examiner: cut the literature review down to what your argument needs, and put your own claim in the first paragraph.",
+  "submit_intro_1": "We publish essays, field notes, review essays and photo essays — on whatever you're currently thinking about. Term papers are welcome, but rewrite them for a reader who is not your examiner: ",
   "submit_intro_2": "Writing in Hindi is accepted. If a piece is accepted in Hindi we publish it in Hindi, with an English summary.",
   "submit_specs": [
-    { "label": "Length", "value": "1,500–4,000 words" },
-    { "label": "Citations", "value": "ASA or Chicago, used consistently" },
-    { "label": "Images", "value": "Your own, or clearly licensed for reuse" },
-    { "label": "Decision", "value": "Within four weeks of submitting" },
-    { "label": "Fee", "value": "None, to submit or to read" }
+    {
+      "label": "Length",
+      "value": "1,500–4,000 words"
+    },
+    {
+      "label": "Citations",
+      "value": "APA format"
+    },
+    {
+      "label": "Images",
+      "value": "Your own, or clearly licensed for reuse - please share the link for google photos, publicly accessible."
+    },
+    {
+      "label": "submission to publish",
+      "value": "Within four weeks"
+    },
+    {
+      "label": "Fee",
+      "value": "always free"
+    }
   ],
-  "contact_email": "socialgaze.jnu@example.com"
+  "contact_email": "jnu.csss@gmail.com"
 }
