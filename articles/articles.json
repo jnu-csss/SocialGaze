@@ -5,3 +5,4 @@
     "permalink": "/essays/{{ page.fileSlug }}/index.html"
   }
 }
+
