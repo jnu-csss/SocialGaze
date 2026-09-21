@@ -21,3 +21,29 @@ collections:
       - { label: "One-line summary", name: "summary", widget: "text" }
       - { label: "Cover image URL (paste your Cloudinary link here, optional)", name: "image", widget: "string", required: false }
       - { label: "Essay text", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - name: "home"
+        label: "Homepage content"
+        file: "_data/site.json"
+        fields:
+          - { label: "Hero heading", name: "hero_title", widget: "string" }
+          - { label: "Hero subheading", name: "hero_subtitle", widget: "text" }
+          - { label: "'Latest essays' note", name: "issue_note", widget: "string" }
+          - label: "Editorial board"
+            name: "board"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+          - { label: "Submission page — paragraph 1", name: "submit_intro_1", widget: "text" }
+          - { label: "Submission page — paragraph 2", name: "submit_intro_2", widget: "text" }
+          - label: "Submission specs"
+            name: "submit_specs"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - { label: "Contact email (shown in footer)", name: "contact_email", widget: "string" }
