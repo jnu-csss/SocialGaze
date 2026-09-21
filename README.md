@@ -1,10 +1,33 @@
+what are to be done in search bar 
+- search by author
+- search by keyword in essay title
+- filter by author
+- filter by broader theme
+- 
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # The Social Gaze — how this site works
 
 This is the student journal site. You do **not** need to know how to code to run it.
 
 ## Adding, editing, or removing an essay
 
-1. Go to your Netlify site's /admin page (e.g. thesocialgaze.netlify.app/admin).
+1. Go to your Netlify site's /admin page ().
 2. Click **Login with GitHub** and authorize. You must already have a free GitHub account and be added as a collaborator on the `jnu-csss/SocialGaze` repository (see below) for this to work.
 3. Click **Essays** on the left, then **New Essay** (or click an existing one to edit or delete it).
 4. Fill in the title, author, date, a one-line summary, and paste the essay text into the box. If you have a photo, upload it to your Cloudinary account first, copy its link, and paste it into the "Cover image URL" field.
