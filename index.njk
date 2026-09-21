@@ -3,6 +3,7 @@ layout: base.njk
 permalink: /index.html
 ---
 {% set essays = collections.article | reverse %}
+{% set recentEssays = essays | recentOnly %}
 <div class="hero">
   <div class="wrap hero-grid">
     <div class="sheet">
@@ -26,6 +27,23 @@ permalink: /index.html
   </div>
 </div>
 
+<section id="search">
+  <div class="wrap sheet">
+    <div class="sec-head">
+      <h2>Search essays</h2>
+      <p id="search-count"></p>
+    </div>
+    <div class="search-controls">
+      <input id="search-box" type="text" placeholder="Search by title, author, theme, or keyword…">
+      <select id="search-author"><option>All authors</option></select>
+      <select id="search-theme"><option>All themes</option></select>
+      <label>From <input id="search-from" type="date"></label>
+      <label>To <input id="search-to" type="date"></label>
+    </div>
+    <div id="search-results"></div>
+  </div>
+</section>
+
 <section id="issue">
   <div class="wrap sheet">
     <div class="sec-head">
@@ -33,12 +51,12 @@ permalink: /index.html
       <p>{{ site.issue_note }}</p>
     </div>
 
-    {% if essays.length > 0 %}
+    {% if recentEssays.length > 0 %}
     <ul class="index">
-      {% for essay in essays %}
+      {% for essay in recentEssays %}
       <li>
         <h3><a href="{{ essay.url | url }}">{{ essay.data.title }}</a></h3>
-        <p class="byline">{{ essay.data.author }}</p>
+        <p class="byline"><a href="{{ ('/authors/' + (essay.data.author | slugify) + '/') | url }}">{{ essay.data.author }}</a></p>
         <p class="dek">{{ essay.data.summary }}</p>
       </li>
       {% endfor %}
@@ -46,6 +64,7 @@ permalink: /index.html
     {% else %}
     <p class="empty">No essays published yet. Once one is added through the editor panel at <code>/admin</code>, it will appear here automatically.</p>
     {% endif %}
+    <p class="archive-pointer">Looking for something older? <a href="{{ '/archive/' | url }}">Browse the archive</a> — essays move here automatically two months after publishing.</p>
   </div>
 </section>
 
