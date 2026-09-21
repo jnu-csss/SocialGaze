@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/SocialGaze/",
     dir: {
       input: ".",
       includes: "_includes",

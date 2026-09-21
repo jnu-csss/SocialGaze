@@ -7,18 +7,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap sheet top-in">
-    <a class="wordmark" href="/">The Social <span>Gaze</span></a>
+    <a class="wordmark" href="{{ '/' | url }}">The Social <span>Gaze</span></a>
     <nav>
-      <a href="/#issue">Latest essays</a>
-      <a href="/#review">How review works</a>
-      <a href="/#board">Editorial board</a>
-      <a href="/#submit">Submit</a>
+      <a href="{{ '/#issue' | url }}">{{ site.nav_issue_label }}</a>
+      <a href="{{ '/#review' | url }}">{{ site.nav_review_label }}</a>
+      <a href="{{ '/#board' | url }}">{{ site.nav_board_label }}</a>
+      <a href="{{ '/#submit' | url }}">{{ site.nav_submit_label }}</a>
     </nav>
   </div>
 </header>
@@ -27,7 +27,7 @@
 
 <footer>
   <div class="wrap sheet">
-    <p>The Social Gaze is written and edited by MA students at Jawaharlal Nehru University, New Delhi.</p>
+    <p>{{ site.footer_line_1 }}</p>
     <p>Authors retain copyright. Essays may be shared with attribution. Write to the editors at {{ site.contact_email }}.</p>
   </div>
 </footer>

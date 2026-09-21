@@ -4,7 +4,7 @@ layout: base.njk
 <div class="hero">
   <div class="wrap">
     <article class="sheet essay-head">
-      <a class="field-back" href="/#issue">← All essays</a>
+      <a class="field-back" href="{{ '/#issue' | url }}">← All essays</a>
       <h1>{{ title }}</h1>
       <p class="byline">{{ author }} · {{ date | readableDate }}</p>
       {% if image %}<img src="{{ image }}" alt="">{% endif %}
