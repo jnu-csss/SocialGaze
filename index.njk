@@ -6,8 +6,8 @@ permalink: /index.html
 <div class="hero">
   <div class="wrap hero-grid">
     <div class="sheet">
-      <h1 class="statement">Write about the society you're <em>already inside</em>.</h1>
-      <p class="standfirst">A peer-reviewed journal by and for MA students at JNU. Anyone can submit, on any subject that carries a sociological argument — there is no fixed beat or theme.</p>
+      <h1 class="statement">{{ site.hero_title }}</h1>
+      <p class="standfirst">{{ site.hero_subtitle }}</p>
     </div>
     {% if essays.length > 0 %}
     <article class="sheet issue-card">
@@ -30,7 +30,7 @@ permalink: /index.html
   <div class="wrap sheet">
     <div class="sec-head">
       <h2>Latest essays</h2>
-      <p>Open submissions — published as soon as they clear review</p>
+      <p>{{ site.issue_note }}</p>
     </div>
 
     {% if essays.length > 0 %}
@@ -71,14 +71,10 @@ permalink: /index.html
       <h2>Editorial board</h2>
       <p>Rotates every academic year</p>
     </div>
-    <!-- EDIT NAMES HERE: change, add, or delete a <div> block. Nothing else depends on these. -->
     <div class="board">
-      <div><strong>Aparna Menon</strong><span>Coordinating editor</span></div>
-      <div><strong>Rohit Bhaskar</strong><span>Editor</span></div>
-      <div><strong>Sneha Yadav</strong><span>Editor</span></div>
-      <div><strong>Imran Qureshi</strong><span>Editor</span></div>
-      <div><strong>Devika Rao</strong><span>Editor</span></div>
-      <div><strong>Karthik Subramanian</strong><span>Copy &amp; production</span></div>
+      {% for member in site.board %}
+      <div><strong>{{ member.name }}</strong><span>{{ member.role }}</span></div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -91,17 +87,15 @@ permalink: /index.html
     </div>
     <div class="submit-grid">
       <div>
-        <p>We publish essays, field notes, review essays and photo essays — on whatever you're currently thinking about, not a pre-set list of topics. Term papers are welcome, but rewrite them for a reader who is not your examiner: cut the literature review down to what your argument needs, and put your own claim in the first paragraph.</p>
-        <p>Writing in Hindi is accepted. If a piece is accepted in Hindi we publish it in Hindi, with an English summary.</p>
+        <p>{{ site.submit_intro_1 }}</p>
+        <p>{{ site.submit_intro_2 }}</p>
         <a class="cta" href="#">Open the submission form</a>
       </div>
       <div>
         <ul class="specs">
-          <li><b>Length</b> 1,500–4,000 words</li>
-          <li><b>Citations</b> ASA or Chicago, used consistently</li>
-          <li><b>Images</b> Your own, or clearly licensed for reuse</li>
-          <li><b>Decision</b> Within four weeks of submitting</li>
-          <li><b>Fee</b> None, to submit or to read</li>
+          {% for spec in site.submit_specs %}
+          <li><b>{{ spec.label }}</b> {{ spec.value }}</li>
+          {% endfor %}
         </ul>
       </div>
     </div>
