@@ -1,9 +1,14 @@
 what needs to be done in search bar 
-- search by author
-- search by keyword in essay title
-- filter by author
-- filter by broader theme
-- 
+- ~~search by author~~
+- ~~search by keyword in essay title~~
+- ~~filter by author~~
+- ~~filter by broader theme~~
+- add in the header
+- 1. about us
+  2. how to submit
+  3. FAQs
+  4. contact us
+  5. 
 - 
 
 
